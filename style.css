@@ -46,6 +46,7 @@
     box-shadow: 0 0 50px #fff;
     transition: 0.2s;
     cursor: pointer;
+    z-index: 20;
 }
 
 .bg {
@@ -57,6 +58,7 @@
     background-size: 1500px;
     background-repeat: repeat-x;
     animation: animateBg 25s linear infinite;
+    z-index: 20;
 }
 
 @keyframes animateBg {
@@ -165,4 +167,58 @@ h2 span {
 
 .count-down .box .txt {
     font-weight: bold;
+}
+
+.fireworks-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%;
+}
+
+h1 {
+    display: none;
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-transform: capitalize;
+    font-size: 40px;
+    letter-spacing: 2px;
+    -webkit-text-stroke: 1px rgb(255, 136, 0);
+    color: rgb(255, 187, 0);
+}
+
+h1 span {
+    color: #4400ff;
+    font-size: 45px;
+    -webkit-text-stroke: 0px transparent;
+}
+
+.dark h1 span {
+    color: #00ffdd;
+}
+
+@keyframes animateText {
+    0% {
+        opacity: 0;
+        left: 30%;
+    }
+    100% {        
+        left: 50%;    
+        opacity: 1;
+    }
+}
+
+@keyframes animateCountDown {
+    0% {
+        opacity: 1;
+        left: 50%;        
+    }
+    100% {    
+        opacity: 0;    
+        left: 80%; 
+    }
 }
